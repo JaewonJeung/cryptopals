@@ -19,10 +19,7 @@ for i in range(65, 123):
     xored_bytes = (numpy_h_bytes^numpy_to_xor).tobytes()
 
     phrase = None
-    try:
-        phrase = xored_bytes.decode('ascii')
-    except: # sometimes the ord range is out of ascii
-        continue
+    phrase = xored_bytes.decode('ascii')
 
     # convert to uppercase so that we can easily check with the freq list
     upper_phrase = phrase.upper()
